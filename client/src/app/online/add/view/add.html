@@ -1,0 +1,45 @@
+<md-dialog aria-label="{{ 'createForm.title' | translate }}" ng-cloak>
+    <form name="addForm" novalidate>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>{{ 'createForm.title' | translate }}</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="add.cancel()">
+                    <md-icon md-svg-src="images/icons/ic_close_black_24px.svg" aria-label="{{ 'createForm.action.cancel' | translate }}"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                <md-input-container>
+                    <label for="petName">{{ 'createForm.field.name' | translate }}*</label>
+                    <input required name="petName" type="text" aria-label="{{ 'createForm.field.name' | translate }}" id="petName" data-ng-model="add.petToCreate.name" />
+                </md-input-container><br/>
+                <md-input-container>
+                    <label>{{ 'createForm.field.category' | translate }}*</label>
+                    <md-select required ng-model="add.petToCreate.category" name="category">
+                        <md-option ng-repeat="cat in add.categories" value="{{ cat.id }}">{{ cat.category }}</md-option>
+                    </md-select>
+                </md-input-container><br/>
+                <md-input-container>
+                    <label for="petPhoto">{{ 'createForm.field.photo' | translate }}</label>
+                    <input type="text" aria-label="{{ 'createForm.field.photo' | translate }}" id="petPhoto" data-ng-model="add.petToCreate.photo" />
+                </md-input-container><br/>
+                <md-input-container>
+                    <label>{{ 'createForm.status.title' | translate }}*</label>
+                    <md-select required name="status" ng-model="add.petToCreate.status">
+                        <md-option ng-repeat="stat in add.status" value="{{ stat }}">{{ 'createForm.status.' + stat | translate }}</md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <md-button ng-click="add.save()" class="md-raised md-primary" ng-disabled="addForm.$invalid">
+                {{ 'createForm.action.save' | translate }}
+            </md-button>
+            <md-button ng-click="add.cancel()" class="md-raised md-warn" style="margin-right:20px;">
+                {{ 'createForm.action.cancel' | translate }}
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

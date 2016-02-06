@@ -1,0 +1,78 @@
+<!-- Header -->
+<div flex flex-order="1">
+    <md-toolbar ng-show="!showSearch">
+        <div class="md-toolbar-tools">
+            <h2><span>PetStore</span></h2><span class="md-caption captionSfeir">{{ 'global.byAuthor' | translate }}</span>
+            <span flex></span>
+            <md-button class="md-icon-button" aria-label="{{ 'global.action.search.title' | translate }}" ng-click="showSearch = !showSearch">
+                <md-icon md-svg-src="images/icons/ic_search_white_18px.svg"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="{{ 'authentication.action.logout' | translate }}" ng-click="online.logout()">
+                <md-icon md-svg-src="images/icons/ic_exit_to_app_white_18px.svg"></md-icon>
+            </md-button>
+            <md-menu>
+                <md-button class="md-icon-button" aria-label="{{selectedLanguage.languageKey | translate}}" ng-click="$mdOpenMenu($event)">
+                    <md-icon md-menu-origin class="flag {{selectedLanguage.cssClass}}"></md-icon>
+                </md-button>
+                <md-menu-content>
+                    <md-menu-item ng-repeat="language in listLanguages">
+                        <md-button ng-click="changeLanguage(language)" aria-label="{{ language.languageKey | translate }}">
+                            <md-icon md-menu-align-target class="flag {{ language.cssClass }}"></md-icon>
+                            {{ language.languageKey | translate }}
+                        </md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
+        </div>
+    </md-toolbar>
+    <md-toolbar ng-show="showSearch" class="md-hue-1">
+        <div class="md-toolbar-tools">
+            <h2><span>PetStore</span></h2><span class="md-caption captionSfeir">{{ 'global.byAuthor' | translate }}</span>
+            <md-input-container flex flex-offset="10" class="searchBar">
+                <label for="searchField">{{ 'global.action.search.help' | translate }}</label>
+                <input id="searchField" ng-enter="online.searchPets()" ng-model="online.filter" aria-label="{{ 'global.action.search.title' | translate }}">
+            </md-input-container>
+            <md-button class="md-icon-button" aria-label="{{ 'global.action.search.title' | translate }}" ng-click="showSearch = !showSearch">
+                <md-icon md-svg-src="images/icons/ic_search_white_18px.svg"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="{{ 'authentication.action.logout' | translate }}" ng-click="online.logout()">
+                <md-icon md-svg-src="images/icons/ic_exit_to_app_white_18px.svg"></md-icon>
+            </md-button>
+            <md-menu>
+                <md-button class="md-icon-button" aria-label="{{selectedLanguage.languageKey | translate}}" ng-click="$mdOpenMenu($event)">
+                    <md-icon md-menu-origin class="flag {{selectedLanguage.cssClass}}"></md-icon>
+                </md-button>
+                <md-menu-content>
+                    <md-menu-item ng-repeat="language in listLanguages">
+                        <md-button ng-click="changeLanguage(language)" aria-label="{{ language.languageKey | translate }}">
+                            <md-icon md-menu-align-target class="flag {{ language.cssClass }}"></md-icon>
+                            {{ language.languageKey | translate }}
+                        </md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
+        </div>
+    </md-toolbar>
+</div>
+<!-- Content -->
+<div flex flex-order="2" id="storeContent">
+    <div layout="row" class="searchResult">
+        <div flex="10">
+            <md-fab-speed-dial md-direction="down" md-open="isOpen" ng-mouseenter="isOpen=true" ng-mouseleave="isOpen=false" class="md-scale">
+                <md-fab-trigger>
+                    <md-button aria-label="menu" class="md-fab md-primary">
+                        <md-icon md-svg-src="images/icons/ic_menu_white_24px.svg"></md-icon>
+                        <md-tooltip md-direction="right">{{ 'global.action.actions' | translate }}</md-tooltip>
+                    </md-button>
+                </md-fab-trigger>
+                <md-fab-actions>
+                    <md-button aria-label="{{ 'global.action.add' | translate }}" class="md-fab md-warn md-mini" ng-click="online.addPet($event)">
+                        <md-icon md-svg-src="images/icons/ic_add_black_18px.svg" aria-label="{{ 'global.action.add' | translate }}"></md-icon>
+                        <md-tooltip md-direction="right">{{ 'global.action.add' | translate }}</md-tooltip>
+                    </md-button>
+                </md-fab-actions>
+            </md-fab-speed-dial>
+        </div>
+        <div data-ui-view></div>
+    </div>
+</div>

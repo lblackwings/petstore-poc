@@ -1,0 +1,16 @@
+{
+    "authentication": {
+        "title": "To access the PetStore, please, authenticate yourself",
+        "field": {
+            "username" : "Username",
+            "password" : "Password"
+        },
+        "action": {
+            "connect" : "Connect",
+            "logout" : "Disconnect"
+        },
+        "errors" : {
+            "1" : "Login and/or password incorrect"
+        }
+    }
+}

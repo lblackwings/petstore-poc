@@ -1,0 +1,37 @@
+{
+    "global": {
+        "byAuthor" : "designed by Michael BERNAGOU",
+        "action": {
+            "actions" : "Actions",
+            "add"    : "Add",
+            "create" : "Create",
+            "update" : "Edit",
+            "delete" : "Delete",
+            "search" : {
+                "title" : "Search",
+                "help" : "Enter any ID"
+            },
+            "save" : "Save",
+            "cancel" : "Cancel"
+        },
+        "forms": {
+            "ok": "Ok",
+            "cancel": "Cancel",
+            "delete": "Delete",
+            "save": "Save"
+        },
+        "search" : {
+          "noresult" : "There is none pet to show. Please try to search."
+        },
+        "errors": {
+            "title" : "Error",
+            "403" : "You are not allowed to execute this action",
+            "disconnected" : "You have been disconnected. Please try to login."
+        },
+        "language" : {
+            "FR" : "Français",
+            "EN" : "English"
+        }
+    }
+
+}

@@ -1,0 +1,36 @@
+{
+    "createForm": {
+        "title": "Add a new pet",
+        "field": {
+            "name" : "Name",
+            "category" : "Category",
+            "tags" : "Tags",
+            "photo" : "Photo Url",
+            "required" : "Champs requis"
+        },
+        "action": {
+            "save" : "Add",
+            "cancel" : "cancel",
+            "back" : "Back"
+        },
+        "status" : {
+            "title" : "Status",
+            "available" : "Available",
+            "pending" : "Pending",
+            "sold" : "Sold"
+        },
+        "confirm" : {
+            "title" : "Pet Added",
+            "message" : "Pet {{name}} has been successfully added to the store.",
+            "failure" : "Un problème est survenue durant le processus. L'animal n'a pas été ajouté."
+        }
+    },
+
+    "deleteForm" : {
+        "confirm" : {
+            "title" : "Pet deletion",
+            "message" : "Are you sure you want to delete the pet {{name}} ? This action cannot be undone",
+            "ok" : "Delete"
+        }
+    }
+}

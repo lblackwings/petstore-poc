@@ -1,0 +1,37 @@
+{
+    "global": {
+        "byAuthor" : "créé par Michael BERNAGOU",
+        "action": {
+            "actions" : "Actions",
+            "add"    : "Ajouter",
+            "create" : "Créer",
+            "update" : "Editer",
+            "delete" : "Supprimer",
+            "search" : {
+                "title" : "Rechercher",
+                "help" : "Entrez un ID"
+            },
+            "save" : "Enregistrer",
+            "cancel" : "Annuler"
+        },
+        "forms": {
+            "ok": "D'accord",
+            "cancel": "Annuler",
+            "delete": "Supprimer",
+            "save": "Enregistrer"
+        },
+        "search" : {
+            "noresult" : "Il n'y a aucun animal à afficher. S'il-vous-plaît, essayer d'effectuer une recherche."
+        },
+        "errors": {
+            "title" : "Erreur",
+            "403" : "Vous n'êtes pas autorisé a effectuée cette opération",
+            "disconnected" : "Vous avez été déconnecté. Veuillez vous identifier à nouveau"
+        },
+        "language" : {
+            "FR" : "Français",
+            "EN" : "English"
+        }
+    }
+
+}

@@ -1,0 +1,19 @@
+{
+    "name": "webserver",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "node webserver",
+        "stop": "node stop-webserver.js"
+    },
+    "dependencies": {
+        "ejs": "*",
+        "underscore": "*",
+        "nodemon": "*",
+        "http-proxy": "1.11.1",
+        "errorhandler": "^1.1.1",
+        "express": "^4.8.0",
+        "morgan": "^1.2.2",
+        "serve-favicon": "^2.0.1"
+    }
+}

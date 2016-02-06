@@ -1,0 +1,161 @@
+body {
+	background-color: #80d8ff;
+}
+
+.clickable { cursor: pointer; }
+
+.container-alert {
+	position: fixed;
+	top: 20%;
+	left: 25%
+	width: 50%;
+	z-index: 5000;
+}
+
+.caption {
+	margin-top: 7px;
+	margin-left: 7px;
+	font-size:10px;
+	font-style:italic;
+}
+
+.searchResult, .formLogin {
+	background-color: #80d8ff;
+}
+
+.md-toolbar:not(.md-hue-1) {
+	fill: #fff;
+}
+
+.searchBar {
+	margin-top: 60px;
+}
+
+.searchBar > label, .searchBar > input {
+	color: white;
+}
+
+.md-content.md-default-theme {
+  background-color: #eee;
+}
+
+.md-toolbar .md-button.md-default-theme {
+    border-radius: 99%;
+}
+
+/* CSS style for flip effect */
+.card {
+  font-family: "museo-slab", serif;
+  display: block;
+  width: 182px;
+  height: 200px;
+  position: relative;
+  z-index: 1;
+  margin: 20px;
+  float: left;
+  -moz-perspective: 1000px;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+
+.card .wrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -moz-transition: -moz-transform 0.4s linear;
+  -o-transition: -o-transform 0.4s linear;
+  -webkit-transition: -webkit-transform 0.4s linear;
+  transition: transform 0.4s linear;
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.card .wrap.flipped {
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.card .wrap.flipped .name, .card .wrap.flipped .flip {
+  background: none;
+  color: white;
+}
+
+.card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  color: #80d8ff;
+  background: white;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.card .wrap.flipped .face .button-front {
+  display: none;
+}
+
+.card .face img {
+  top: 0;
+  left: 0;
+  width: 182px;
+  heigth: 200px;
+}
+
+.card .face p {
+	padding: 0;
+	margin: 0 0 10px;
+	font-size: 12px;
+	font-family : "museo-sans", sans-serif;
+	color: black;
+	text-align: left;
+}
+
+.card .face h2 {
+	margin: 0 0 5px;
+	padding : 0;
+	font-size: 14px;
+	color: black;
+	text-shadow : none;
+	text-align: left;
+}
+
+.card .face .name {
+  position: absolute;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  bottom: 2px;
+  left: 2px;
+}
+
+.delete-card {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+
+.card .face.back {
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  padding: 10px;
+}
+
+md-fab-speed-dial.md-scale .md-fab-action-item {
+	-webkit-transform: scale(0);
+  transform: scale(0);
+}

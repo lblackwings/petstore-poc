@@ -1,0 +1,52 @@
+<!-- Header -->
+<md-content>
+    <div flex flex-order="1">
+        <md-toolbar class="md-primary">
+            <div class="md-toolbar-tools">
+                <h2><span>PetStore</span></h2><span class="md-caption captionSfeir">{{ 'global.byAuthor' | translate }}</span>
+                <span flex></span>
+                <md-menu>
+                    <md-button class="md-icon-button" aria-label="{{selectedLanguage.languageKey | translate}}" ng-click="offline.openMenu($mdOpenMenu, $event)">
+                        <md-icon md-menu-origin class="flag {{selectedLanguage.cssClass}}"></md-icon>
+                    </md-button>
+                    <md-menu-content>
+                        <md-menu-item ng-repeat="language in listLanguages">
+                            <md-button ng-click="changeLanguage(language)" aria-label="{{ language.languageKey | translate }}">
+                                <md-icon md-menu-align-target class="flag {{ language.cssClass }}"></md-icon>
+                                {{ language.languageKey | translate }}
+                            </md-button>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+        </md-toolbar>
+    </div>
+
+    <!-- Content -->
+    <div flex flex-order="2" class="formLogin">
+        <div layout="column" layout-align="center center">
+            <div flex>&nbsp;</div>
+            <div flex>
+                <span class="md-headline">{{ 'authentication.title' | translate }}</span>
+            </div>
+            <form name="loginForm" ng-submit="offline.login()">
+                <div flex>
+                    <md-input-container>
+                        <label for="username" style="color: white;">{{ 'authentication.field.username' | translate }}</label>
+                        <input style="color: white;" required type="text" aria-label="{{ 'authentication.field.username' | translate }}" id="username" data-ng-model="offline.credential.username" />
+                    </md-input-container>
+                    <md-input-container>
+                        <label for="password" style="color: white;">{{ 'authentication.field.password' | translate }}</label>
+                        <input style="color: white;" required type="password" aria-label="{{ 'authentication.field.password' | translate }}" id="password" data-ng-model="offline.credential.password" />
+                    </md-input-container>
+                </div>
+                <div flex>
+                    <md-button ng-disabled="loginForm.$invalid" class="md-raised md-primary" style="margin-left: 146px;" type="submit" id="submit">{{ 'authentication.action.connect' | translate }}</md-button>
+                    <div ng-messages ng-show="offline.login.error">
+                        <span style="color: red;">{{ 'authentication.errors.1' | translate }}</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</md-content>

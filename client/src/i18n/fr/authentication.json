@@ -1,0 +1,16 @@
+{
+    "authentication": {
+        "title": "Pour accéder au PetStore, veuillez vous identifier s'il-vous-plaît",
+        "field": {
+            "username" : "Nom d'utilisateur",
+            "password" : "Mot de passe"
+        },
+        "action": {
+            "connect" : "Se connecter",
+            "logout" : "Se déconnecter"
+        },
+        "errors" : {
+            "1" : "Login et/ou mot de passe sont incorrects"
+        }
+    }
+}

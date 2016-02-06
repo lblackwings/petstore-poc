@@ -1,0 +1,36 @@
+{
+    "createForm": {
+        "title": "Ajout d'un nouvel animal",
+        "field": {
+            "name" : "Nom",
+            "category" : "Catégorie",
+            "tags" : "Etiquettes",
+            "photo" : "Photo url",
+            "required" : "Champs requis"
+        },
+        "action": {
+            "save" : "Ajouter",
+            "cancel" : "Annuler",
+            "back" : "Retour"
+        },
+        "status" : {
+            "title" : "Etat",
+            "available" : "Disponible",
+            "pending" : "En attente",
+            "sold" : "Vendu"
+        },
+        "confirm" : {
+            "title" : "Animal ajouté",
+            "message" : "L'animal {{name}} a été ajouté au magasin avec succès.",
+            "failure" : "Un problème est survenue durant le processus. L'animal n'a pas été ajouté."
+        }
+    },
+
+    "deleteForm" : {
+        "confirm" : {
+            "title" : "Suppression d'un animal",
+            "message" : "Etes-vous sûr de vouloir supprimer l'animal {{name}} ? Cette action est irréversible.",
+            "ok" : "Supprimer"
+        }
+    }
+}

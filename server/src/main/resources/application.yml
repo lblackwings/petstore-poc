@@ -1,0 +1,25 @@
+application:
+    name: Petstore
+
+spring:
+    application:
+        name: Petstore
+    main:
+        show-banner: true
+    datasource:
+        url: jdbc:h2:~/test
+        username: sa
+        password:
+        initialize: true
+    jpa:
+        database: H2
+        show-sql: false
+        hibernate:
+            ddl-auto: none
+
+    server:
+        port: 8080
+        ssl:
+            key-store:  src/test/resources/security/localhost.keystore
+            key-store-password: password
+            key-password: password

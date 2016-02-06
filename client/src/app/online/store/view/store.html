@@ -1,0 +1,25 @@
+<div ng-init="store.init()">
+    <div flex flex-offset="10" ng-if="!store.pets || store.pets.length == 0">
+        <h3>{{ 'global.search.noresult' | translate }}</h3>
+    </div>
+    <div flex-offset="10" ng-repeat="pet in store.pets track by $index">
+        <div class="card post" style="float:left;">
+            <div class="wrap" id="{{'card' + $index}}">
+                <div class="face front" ng-click="store.flipCard($index)">
+                    <img ng-src="{{ pet.photos[0].url }}" alt="{{pet.name}}">
+                    <span class="name">{{pet.name}}</span>
+                    <md-button aria-label="{{ 'global.action.delete' | translate }}" class="md-fab md-mini md-warn delete-card button-front" ng-click="store.deletePet($event, pet);$event.stopPropagation();">
+                        <md-icon md-svg-src="images/icons/ic_delete_white_18px.svg" aria-label="{{ 'global.action.delete' | translate }}"></md-icon>
+                        <md-tooltip md-direction="down">{{ 'global.action.delete' | translate }}</md-tooltip>
+                    </md-button>
+                </div><!-- end .front -->
+
+                <div class="face back" ng-click="store.unFlipCard($index)">
+                    <h2>#ID : {{pet.id}} - {{pet.name}}</h2>
+                    <p>{{ 'createForm.field.category' | translate }} : {{pet.categories[0].category}}</p>
+                    <p>{{ 'createForm.status.title' | translate }} : {{pet.status}}</p>
+                </div><!-- end .back -->
+            </div><!-- end .wrap -->
+        </div><!-- end .post -->
+    </div>
+</div>

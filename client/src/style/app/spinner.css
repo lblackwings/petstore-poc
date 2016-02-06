@@ -1,0 +1,23 @@
+
+.spinner {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1100;
+    background-color: white;
+    opacity: .6;
+    display: none;
+}
+
+.spinner .loading {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+}
+
+.spinner .loading img {
+    margin-top:10px;
+}
